@@ -53,3 +53,17 @@
 	  x.className = "header";
 	}
   } 
+
+const budgetInput = document.querySelector('input[name="Enterprise-budget"]');
+const budgetRegex = /^3[0-9]{5}$/;
+const errorMessage = document.querySelector('.error-message');
+
+budgetInput.addEventListener('input', function(event) {
+  if (!budgetRegex.test(event.target.value)) {
+    event.target.setCustomValidity("Enterprise budget must be at least 300,000.");
+    errorMessage.style.display = 'block';
+  } else {
+    event.target.setCustomValidity("");
+    errorMessage.style.display = 'none';
+  }
+});
