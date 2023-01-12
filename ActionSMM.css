@@ -1269,3 +1269,11 @@ textarea{
 	  text-align: left;
 	}
 }
+
+input[name="Enterprise-budget"]:invalid + .error-message {
+  display: block;
+}
+
+.error-message {
+  display: none;
+}
