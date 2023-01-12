@@ -1270,10 +1270,7 @@ textarea{
 	}
 }
 
-input[name="Enterprise-budget"]:invalid + .error-message {
-  display: block;
+input.error{
+  border: 2px solid red;
 }
 
-.error-message {
-  display: none;
-}
